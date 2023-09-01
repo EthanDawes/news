@@ -2,6 +2,8 @@ import dotenv
 import ssl
 import smtplib
 import os
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
 
 dotenv.load_dotenv()
@@ -25,11 +27,12 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     with open("recipients.csv") as recipients:
         for recipient in recipients.readlines():
             name, email = recipient.split(",")
-            formattedMsg = EmailMessage()
+            # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
+            formattedMsg = MIMEMultipart("alternative")
             formattedMsg['Subject'] = "Ethan's life update!"
             formattedMsg['From'] = addr
             formattedMsg['To'] = email
-            formattedMsg.set_content(msg.replace("$name", name))
+            formattedMsg.attach(MIMEText(msg.replace("$name", name), "plain", "utf-8"))
 
             server.send_message(formattedMsg)
 
