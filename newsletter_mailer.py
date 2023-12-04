@@ -14,7 +14,8 @@ password = os.environ["EMAIL_PW"]
 # Create a secure SSL context
 context = ssl.create_default_context()
 
-with open("message.txt", encoding="utf8") as file:
+# Word sometimes produces invalid unicode, so ignore it
+with open("message.htm", encoding="utf8", errors='ignore') as file:
     msg = file.read()
 
 print(msg)
@@ -32,7 +33,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             formattedMsg['Subject'] = "Ethan's life update!"
             formattedMsg['From'] = addr
             formattedMsg['To'] = email
-            formattedMsg.attach(MIMEText(msg.replace("$name", name), "plain", "utf-8"))
+            formattedMsg.attach(MIMEText(msg.replace("$name", name), "html", "utf-8"))
 
             server.send_message(formattedMsg)
 
