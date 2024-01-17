@@ -2,9 +2,23 @@ import dotenv
 import ssl
 import smtplib
 import os
+from datetime import date, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
+
+
+def get_mailing_period():
+    """
+    Returns the date for which this email is for, to be displayed in the subject
+    If before 21st day, return previous month. Afterwards, do this month
+    """
+    today = date.today()
+    if today.day > 20:
+        return today
+    else:
+        return today - timedelta(days=today.day)
+
 
 dotenv.load_dotenv()
 port = 465  # For SSL
@@ -15,7 +29,7 @@ password = os.environ["EMAIL_PW"]
 context = ssl.create_default_context()
 
 # Word sometimes produces invalid unicode, so ignore it
-with open("message.htm", encoding="utf8", errors='ignore') as file:
+with open("message.html", encoding="utf8", errors='ignore') as file:
     msg = file.read()
 
 print(msg)
@@ -30,7 +44,8 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             name, email = recipient.split(",")
             # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
             formattedMsg = MIMEMultipart("alternative")
-            formattedMsg['Subject'] = "Ethan's life update!"
+            period = get_mailing_period().strftime("%B %Y")
+            formattedMsg['Subject'] = f"Ethan's {period} life update!"
             formattedMsg['From'] = addr
             formattedMsg['To'] = email
             formattedMsg.attach(MIMEText(msg.replace("$name", name), "html", "utf-8"))
