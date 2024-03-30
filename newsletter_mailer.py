@@ -2,6 +2,7 @@ import dotenv
 import ssl
 import smtplib
 import os
+from tqdm import tqdm
 from datetime import date, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -40,7 +41,7 @@ if len(confirm) == 0 or confirm[0] != "y":
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     server.login(addr, password)
     with open("recipients.csv") as recipients:
-        for recipient in recipients.readlines():
+        for recipient in tqdm(recipients.readlines()):
             name, email = recipient.split(",")
             # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
             formattedMsg = MIMEMultipart("alternative")
