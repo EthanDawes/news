@@ -1,0 +1,241 @@
+<head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title>Ethan's College Shenanigans: January 2024</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+    <!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+    <!-- CSS Reset -->
+    <style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,  body {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/* What it does: Forces Outlook.com to display emails full width. */
+.ExternalClass {
+	width: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+	margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,  td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+table table table {
+	table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+.yshortcuts a {
+	border-bottom: none !important;
+}
+/* What it does: Another work-around for iOS meddling in triggered links. */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+}
+</style>
+
+    <!-- Progressive Enhancements -->
+    <style type="text/css">
+		img {
+			object-fit: cover;
+		}
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid,
+            .fluid-centered {
+                width: 270px !important;
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            /* And center justify these ones. */
+            .fluid-centered {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+        
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+                
+        }
+
+    </style>
+    </head>
+    <body bgcolor="#e0e0e0" width="100%" style="margin: 0;" yahoo="yahoo" class="vsc-initialized" autocomplete="off">
+    <table bgcolor="#e0e0e0" cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="border-collapse:collapse;">
+      <tbody><tr>
+        <td><center style="width: 100%;">
+            
+            <!-- Visually Hidden Preheader Text : BEGIN -->
+            <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">Hello $name! I hope you had a pretty good Valentine's day! I certainly enjoyed becoming a Valentine's Day clown at Juggling club! As always, I'd love to hear about the ✨𝒮𝒽𝑒𝓃𝒶𝓃𝒾𝑔𝒶𝓃𝓈✨ you've been up to too!</div>
+            <!-- Visually Hidden Preheader Text : END --> 
+            
+            <!-- Email Header : BEGIN -->
+            <table align="center" width="600" class="email-container">
+            <tbody><tr>
+                <td style="padding: 20px 0; text-align: center"><img src="https://funblaster22.github.io/news/surge.png" width="200" height="50" alt="fish" border="0"></td>
+              </tr>
+          </tbody></table>
+            <!-- Email Header : END --> 
+            
+            <!-- Email Body : BEGIN -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="600" class="email-container">
+            
+            <!-- Hero Image, Flush : BEGIN -->
+            <tbody><tr>
+                <td class="full-width-image"><img src="https://lh3.googleusercontent.com/pw/AP1GczMq5hILqSB60XvpDO78wzGcp8rAYdtddYUEgbRQ13kWELzEz7YkIXF1_os8f8MIXqd9r8lBzrR3q7cOrh7Av93iIzH4LtgBAqfjiw-Wic-eIZwx8tAsKe2HFyD1LbBEtRo4xN8kRkzV9ZtTVYdW1qfo9w=w1159-h869-s-no-gm?authuser=2" width="600" height="300" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; aspect-ratio: 6 / 3"></td>
+              </tr>
+            <!-- Hero Image, Flush : END --> 
+            
+            <!-- 1 Column Text : BEGIN -->
+            <tr>
+                <td style="padding: 40px; text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; color: #555555;">
+				  <h1>Ethan's College Shenanigans:<br>March 2024</h1>
+					Hello $name! March has been the calm before the storm: learning new content in preparation for my six exams next month!&nbsp;Pictured is me getting inducted into the <a href="https://www.housing.purdue.edu/campus-living/get-involved/nrhh.html">National Residence Hall Honorary</a>, which recognizes the top 1% of student hall leaders! As always, I'd love to hear what✨𝓉𝑜𝓂𝒻𝑜𝑜𝓁𝑒𝓇𝓎✨ you've been up to!<br>
+                <br>
+                
+                </td>
+              </tr>
+            <!-- 1 Column Text : BEGIN --> 
+            
+            <!-- Two Even Columns : BEGIN -->
+            <tr>
+                <td align="center" valign="top" style="padding: 10px;"><table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tbody><tr>
+                    <td class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                        <td style="padding: 10px; text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczMprhRH-lqw-uiB3Q9zgswMVjbmQm-CNZEGx8ASGvMIv1WGYTJIO2Id9KYxoyFOfRRy4BoO_QDESUvrB5NLIFNCiyKfSN1Km0K4LEN1Frq4mADyevjSOLQ7lckejcwGe0mYpglzSnbN0gRuzvQsAUo0iA=w869-h869-s-no-gm?authuser=2" width="270" height="270" border="0" class="fluid"></td>
+                      </tr>
+                        <tr>
+                        <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow"> Our hall club revitalized a McCutcheon tradition, Scotia Fantasia, a Scottish-themed formal. Attendance was hampered by a basketball game, but we're all proud of pulling it off nonetheless!<br>&nbsp;&nbsp; </td>
+                      </tr>
+                      </tbody></table></td>
+                    <td class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                        <td style="padding: 10px; text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczMv1NKpyaos52qmHsIWAvoAvzYyGGafSqFxrXg6VKcP4MzKmQmnzcLSqh7KuFEEzBg0s2NrVM2H0mbwwKDeqLUQ-KwLR_O4IZqU_kCU-9oDWy4wI7-hWG67U4O6TKLi7yCZBmULOh1LDF_AtHpoKqQ_kw=w1159-h869-s-no-gm?authuser=2" width="270" height="270" border="0" class="fluid"></td>
+                      </tr>
+                        <tr>
+                        <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">Over spring break, I helped with Natalie's Eagle Scout project! I was the only person 16+ who could use a drill because of BOGUS rules. We had to get creative in delegating tasks to minimize downtime.<br><br></td>
+                      </tr>
+                      </tbody></table></td>
+                  </tr>
+                  </tbody></table></td>
+              </tr>
+            <!-- Two Even Columns : END --> 
+            
+            <!-- Three Even Columns : BEGIN -->
+            <tr>
+                <td align="center" valign="top" style="padding: 10px;"><table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tbody><tr>
+                    <td width="33.33%" class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                        <td style="padding: 10px; text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczN2MU5aWP0LL5AOt1e41j5uqOyZjLiHYQwbpD1THRRQy6GOJK1RCuGn3qIT9F_06Ex4Q1-9hUe9l49RR3JmeAN4eCxZCpKZSXinF12k3ufTi7HU2ykhSV7U8MoNBZ2iTJ6JzuaT3af2ZagPtVJIibfdAg=w671-h869-s-no-gm?authuser=2" width="270" height="270" border="0" class="fluid"></td>
+                      </tr>
+                        <tr>
+                        <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">Ran McCutcheon Hall basketball tournament. Got off to a shaky start as I don't know the first thing about basketball (Sports fanatics will cite this for why I should watch a Purdue game). For this, programmed a team-matcher that no one used 😢 (this should teach me to conduct market analysis first)</td>
+                      </tr>
+                      </tbody></table></td>
+                    <td width="33.33%" class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                        <td style="padding: 10px; text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczNBTjjy4p4ZwjUvsa8LfD_Py7Ocpq2_dzsYAaoUmYoh086atfnqcgtb2csyjQzY8WE-JR0RdWhMOCeTHyyXwjMa0E_YneKW61kEf2_D2LpsGD9rDALAO9a4zUlEZqSp_i9ZDTPYrPKAjvqzyWZbEz00tg=w1159-h869-s-no-gm?authuser=2" width="270" alt="Weepuls on a table" border="0" class="fluid"></td>
+                      </tr>
+                        <tr>
+                        <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow"> Attended my first drag show in celebration of trans visibility day! The atmosphere was incredibly hype and the costumes were amazing! My favorite was a clown on stilts for obvious reasons</td>
+                      </tr>
+                      </tbody></table></td>
+                  </tr>
+                  </tbody></table></td>
+              </tr>
+            <!-- Three Even Columns : END --> 
+            
+            <tr><td style="padding: 10px;"><img src="https://lh3.googleusercontent.com/pw/AP1GczNJLPBFP1MCfgo2LEcNSmg0qd-tyurtHWNDROdzDHGyxCK2DdS37JwATFxvluj5kmZ_izIeUzHGZ48KHOP1GyKjg9Pj5wTGGlcQcRnSHYWh0AckXEARfihvTURlj9wxXPfgAeWdckoQ1GGk6SbizdhlUA=w1470-h655-s-no-gm?authuser=2" width="100%"></td></tr>
+            <tr><td style="text-align: center; font-family: sans-serif; color: #555555; padding: 0 10%">Branded my spring break nights as "Ethan's do-it-a-thon". Got a lot done: plan test credits, summer classes, organized technology junk drawer, attempted Roth IRA 😭, and accidentally woke family playing Just Dance at 2am 🤭</td></tr>
+            
+            			<!-- 1 Column Text : BEGIN -->
+            <tr>
+                <td style="padding: 40px; line-height: 20px;">
+				  <h3 style="color: rgb(85, 85, 85); font-family: sans-serif; font-size: 15px; text-align: center;">In other news...</h3>
+					<ul style="">
+						<li style=""><font color="#555555" face="sans-serif"><span style="font-size: 15px;">Hall club treasurer dropped out, which was upsetting considering we had $14k late and needing to be paid (ALMOST WENT TO COLLECTIONS, NOT CLICKBAIT)</span></font><br></li><li style=""><font color="#555555" face="sans-serif"><span style="font-size: 15px;">Did not get RA position 🫤 although I'm not feeling too bad because other freshmen I talked to also didn't get the position or got waitlisted, which means you'll likely get a non-air conditioned hall. Also proud of the fact that my application had to score a 95% on their rubric to even get an interview</span><br></font></li><li style=""><font color="#555555" face="sans-serif"><span style="font-size: 15px;">Discovered the joys of automated code testing. Made my assignment <i>slightly</i> less painful!</span></font></li><li style=""><font color="#555555" face="sans-serif"><span style="font-size: 15px;">Visited University of Wisconsin-Madison to share my college insight for Natalie. IMO the tour was poorly done (repeated info from presentation and did not explain buildings as we walked) and the city was too car-centric</span></font><br></li>
+						<li style="color: rgb(85, 85, 85); font-family: sans-serif; font-size: 15px;">As always, here are <a href="https://photos.app.goo.gl/ktH1rDyyrLCSSsrv9" target="_blank">extra pictures</a></li>
+					</ul>
+					
+					<br>
+                <br>
+                
+                </td>
+              </tr>
+            <!-- 1 Column Text : BEGIN -->
+            
+          </tbody></table>
+            <!-- Email Body : END --> 
+</center></td></tr></tbody></table></body>
