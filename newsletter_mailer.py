@@ -27,10 +27,16 @@ addr = os.environ["EMAIL_ADDR"]
 password = os.environ["EMAIL_PW"]
 
 # Create a secure SSL context
-context = ssl.create_default_context()
+context = ssl.create_default_context() 
+
+def news_path():
+    directory = "_posts"
+    files = os.listdir(directory)
+    files.sort()
+    return directory + "/" + files[-1]
 
 # Word sometimes produces invalid unicode, so ignore it
-with open("message.html", encoding="utf8", errors='ignore') as file:
+with open(news_path(), encoding="utf8", errors='ignore') as file:
     msg = file.read()
 
 print(msg)
