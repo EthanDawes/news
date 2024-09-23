@@ -1,0 +1,28 @@
+Dear $name,
+
+Hey hey hey! What's new with you? For me, I've been living, laughing, and loving! I'm back again, this time with 90% fewer grammatical mistakes! Another month has gone by, so here's what I'm up to:
+
+On the weekend, I decided to give the medieval dancing club a shot. It was fun and interesting (lot of circles and more adjacent to ballroom dancing).
+
+During the weekday, I signed up for an event to meet other CS majors run by Purdue's CS Undergraduate Student Board (USB, clever, see what they did there?) and met four other cool 1st year CS majors. Unfortunately, all but one, Gabe, have kind of dropped out of existence. Gabe's cool though, I convinced him to come to juggling and unicycling, and he is in my CS tools class.
+
+Both of us are applying to become an RA (resident assistant). You basically get paid for organizing events for your floor, writing reports when things go wrong, and doing rounds. In return, you get free food and housing plus a stipend, so a pretty cool deal in my opinion. I'll update you next month on how the situation develops!
+
+Halfway through the month, I teleported over to Seattle to help Natalie look at colleges. They were mostly small liberal arts schools, and I believe they would be a good fit for her, but I'm still very glad I'm at Purdue just because I don't believe I could get good CS education at a smaller school. Plus, something about knowing all 10 other people in my major kind of scares me. But again, this doesn't make them bad schools and I'd encourage her to do what she wants, this is just why I wouldn't go there. If you want to know more, you can talk to her directly. Her phone number is ###-###-####.
+
+Back at school, I hardly get a week's rest before I have two midterms on the same day, cs and calculus. That made for a rough day and week. As we speak, I have an exam for discrete math that I should be preparing for on Friday 😬 and then another one for math next week.
+
+When I'm not studying for exams, I make time on Fridays for the weekly hack night (in this context, hacking is most similar to inventing as opposed to gaining unauthorized entry). I've met a lot of cool people there too, one of them being Tejas, a senior in CS with a minor in physics. He's also in my corporate partners (https://datamine.purdue.edu/corporate/) section, and I have a lot of respect for him because of how cool and smart he is.
+
+For Halloween, I paid a visit to our Makerspace to print a Halloween pumpkin shirt! In the spirit of the day, I also went on a liminal spaces exploration of our buildings' subbasements. Very fun and spooky!
+
+The weather here has been getting rather chilly, so I hope y'all are staying warm! The cold has turned my hair from humid and curly to arid and frizzy 🙁. As always, have fun and let me know if you're doing anything interesting!
+
+
+Here are some photos which I'll update every month with my best shenanigans! Feel free to leave comments on the pictures, and I'll try to contextualize them! https://l.linklyhq.com/l/1uPkI
+
+If you want to send me physical mail, my address is:
+$address
+
+Sincerely,
+Ethan Dawes
