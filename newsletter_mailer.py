@@ -25,6 +25,7 @@ dotenv.load_dotenv()
 port = 465  # For SSL
 addr = os.environ["EMAIL_ADDR"]
 password = os.environ["EMAIL_PW"]
+mail = os.environ["MAILING_ADDR"]
 
 # Create a secure SSL context
 context = ssl.create_default_context() 
@@ -38,6 +39,7 @@ def news_path():
 # Word sometimes produces invalid unicode, so ignore it
 with open(news_path(), encoding="utf8", errors='ignore') as file:
     msg = file.read()
+    msg = msg.replace("$address", mail)
 
 print(msg)
 confirm = input("\nWill send the above. Proceed? ")
