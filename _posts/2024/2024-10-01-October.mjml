@@ -1,0 +1,129 @@
+<!-- https://mjml.io/try-it-live/ -->
+
+<mjml>
+  <mj-head>
+    <mj-raw>
+    	<title>Ethan's College Shenanigans: {{ page.date | date: "%b %Y" }}</title>
+    </mj-raw>
+    <mj-attributes>
+      <mj-text font-family="sans-serif" align="center" font-size="16px" color="#555" />
+      <mj-image border-radius="8px" />
+    </mj-attributes>
+    <mj-style>
+      img {
+        object-fit: cover;
+      }
+      li {
+      	margin: 16px 0;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#e0e0e0">
+    <mj-section>
+      <mj-column>
+        <!-- Hidden Preheader -->
+        <mj-text font-size="1px" color="transparent" height="0px" padding="0px">
+          Hello $name! I've done new things, so now it's time you hear about them!
+        </mj-text>
+        <!-- Header -->
+        <mj-image src="https://funblaster22.github.io/news/surge.png" href="https://funblaster22.github.io/news" alt="fish" width="200px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper background-color="#fff" border-radius="8px" padding-top="0">
+
+
+      <mj-section padding-top="0">
+        <mj-column>
+          <!-- Hero Image -->
+          <mj-image src="https://funblaster22.github.io/news/2024/Oct/makup.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-text font-size="24px" color="#333" font-weight="bold">
+            Ethan's College Shenanigans:<br />October 2024
+          </mj-text>
+          <mj-text>
+            ... Boo! It's spooky month, $name! 🎃🧙🪄🧹 I'm a big fan of candy and you're never too old to go trick or treating! I got a decent haul too! Some of my favorite costumes I saw: Snoopy, Woodstock, pineapple, cat, and donut. Do you have a favorite costume you've ever worn?
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/spooktacular.jpg" />
+          <mj-text>My first event as RHA events director! Had pumpkin/mask painting, food, photo booth, just dance, and a face painter! Food quickly ran out, oops. DIYed volunteer shirts, would not do that again due to time lol. Lots of learning! Will gladly take holiday ideas!</mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/severson.jpg" />
+          <mj-text>Attended Jay Severson leadership retreat (RHA). Learned various techniques. Afterwards, explored the hosting farm. Made scented candle, unfortunately missed cow live birth, jumped on inflatable cushion.</mj-text>
+        </mj-column>
+      </mj-section>
+      
+      
+      <mj-section>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/feast.jpg" />
+          <mj-text>Dad time! Went to the Feast of the Hunter's moon together. Tried their root beer &amp; French onion soup, watched music, browsed stores, and watched the period actors.</mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/doll.jpg" />
+          <mj-text>Stumbled upon a free doll museum in West Lafayette 🤯. Pictures inside disallowed, so trust dolls were stacked from floor to ceiling!</mj-text>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/cook.jpg" />
+          <mj-text>Wandered to the ominous triangle building (Cook Medical)</mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/mall.jpg" />
+          <mj-text>Discovered there’s a mall here⁉️</mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/hygiene.jpg" />
+          <mj-text>Helped hand out free hygiene supplies for students (RHA)</mj-text>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-text font-size="20px" color="#333" font-weight="bold">In other news...</mj-text>
+          <mj-text align="left">
+            <ul>
+              <li>It's midterm season! (linear algebra &amp; CS). I'm my hardest critic, so while there are some
+                aspects I wish I could've done better, I'm implementing changes to improve!</li>
+              <li>I won the lottery‼️💵 Well, the housing lottery at least. Purdue changed their system (much
+                better IMO) and thanks to my involvement in RHA, I was guaranteed a spot. 🥳 Will be rooming
+                with a friend, contingent on RA application.</li>
+              <li>November but relevant: Voted in my first election via mail 🗳️! Honestly underwhelming because
+              </li>
+              <ul>
+                <li>I didn't get a sticker 😢</li>
+                <li>Electoral college</li>
+                <li>👱‍♂️</li>
+              </ul>
+              <li>Redesigned newsletter w/ more roundness! Thoughts?</li>
+              <li>As always, here are <a href="https://albums.ethandawes.dev/?t=3GxfDXAK#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA" target="_blank">extra
+                  pictures</a>, now hosted on my home server! ☁️</li>
+            </ul>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>
+    <mj-section>
+      <mj-column>
+        <mj-text align="center" font-size="12px"><a href="https://funblaster22.github.io/news/2024/Sep">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px">$address</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
