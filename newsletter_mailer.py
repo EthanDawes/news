@@ -32,9 +32,23 @@ context = ssl.create_default_context()
 
 def news_path():
     directory = "_posts"
-    files = os.listdir(directory)
-    files.sort()
-    return directory + "/" + files[-1]
+    last_modified_time = 0
+    last_modified_file = None
+    
+    # Walk through the directory recursively
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            
+            # Get the last modified time of the file
+            file_modified_time = os.path.getmtime(file_path)
+            
+            # Update if this file is more recently modified
+            if file_modified_time > last_modified_time:
+                last_modified_time = file_modified_time
+                last_modified_file = file_path
+    
+    return last_modified_file
 
 # Word sometimes produces invalid unicode, so ignore it
 with open(news_path(), encoding="utf8", errors='ignore') as file:
