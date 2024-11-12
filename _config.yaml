@@ -9,5 +9,3 @@ github_username:  funblaster22
 # Build settings
 markdown: kramdown
 permalink: /:year/:short_month/index:output_ext
-assets:
-  path: "assets"
