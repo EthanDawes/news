@@ -1,0 +1,23 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "Home of my newsletters",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funblaster22/news.git"
+  },
+  "author": "Ethan Dawes",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/funblaster22/news/issues"
+  },
+  "homepage": "funblaster22.github.io/news/",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

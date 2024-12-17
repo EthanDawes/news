@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan's College Shenanigans: Home</title>
+    <meta name="description" content="description"/>
+    <meta name="author" content="Ethan Dawes" />
+    <meta name="keywords" content="blog,newsletter" />
+  </head>
+  <body>
+    <ul>
+      {% for post in collections.posts reversed %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y %b" }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
