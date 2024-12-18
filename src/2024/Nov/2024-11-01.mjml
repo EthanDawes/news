@@ -1,0 +1,100 @@
+<mjml>
+  <mj-head>
+    <mj-raw>
+    	<title>Ethan's College Shenanigans: {{ page.date | date: "%b %Y" }}</title>
+    </mj-raw>
+    <mj-attributes>
+      <mj-text font-family="sans-serif" align="center" font-size="16px" color="#555" />
+      <mj-image border-radius="8px" />
+    </mj-attributes>
+    <mj-style>
+      img {
+        object-fit: cover;
+      }
+      li {
+      	margin: 16px 0;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#e0e0e0">
+    <mj-section>
+      <mj-column>
+        <!-- Hidden Preheader -->
+        <mj-text font-size="1px" color="transparent" height="0px" padding="0px">
+          Hello $name! I've done new things, so now it's time you hear about them!
+        </mj-text>
+        <!-- Header -->
+        <mj-image src="/surge.png" href="/" alt="fish" width="200px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper background-color="#fff" border-radius="8px" padding-top="0">
+
+
+      <mj-section padding-top="0">
+        <mj-column>
+          <!-- Hero Image -->
+          <mj-image src="presedent.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-text font-size="24px" color="#333" font-weight="bold">
+            Ethan's College Shenanigans:<br />November + December 2024
+          </mj-text>
+          <mj-text>
+            We made it! 🥳 My third semester came and went in a flash. I'm incredibly relieved to have a break at last cuz so much has happened! For instance, I met the president of Purdue University, Mung Chiang! 🤩 He's a pretty cool guy and cares about student issues. What are your plans for break?
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="gingerbread.jpg" />
+          
+        </mj-column>
+        <mj-column>
+          <mj-text>My event, RHA Finals Frost Fest included a gingerbread house building contest and lots of free food. The winner was my friend El's depiction of Purdue Pete getting run over by a train. I was so busy during the event that I didn't even get time to make my own house ☹️ (don't worry, I got one to go). Afterwards, only 2 people helped clean, would not do that again.</mj-text>
+        </mj-column>
+      </mj-section>
+      
+      
+      <mj-section>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-text>RHA's Finals Fuel Up event! We gave away snacks, hot chocolate ☕ and fidget toys to help students distress before finals. It was so popular we were mobbed within several minutes</mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="250px" height="250px" src="josh.jpg" />
+          <mj-text>Made a new friend! This is Josh ✨, &amp; we incidentaly met while waiting for communications class. After finals, I met up with some of his friends to watch a movie and eat hot pot. He's really good at chess (even though he'll deny it) and enjoys cooking.</mj-text>
+        </mj-column>
+      </mj-section>
+
+
+      <mj-section>
+        <mj-column>
+          <mj-text font-size="20px" color="#333" font-weight="bold">In other news...</mj-text>
+          <mj-text align="left">
+            <ul>
+              <li>Thanksgiving break timing was rather unfortunate. We had one week of class afterwards, then finals, so many projects incidentaly fell to that time.</li>
+              <li>McCutcheon Pancake Night! 🥞🌃 This is a fun tradition my friends and I have to hang out and eat free pancakes!</li>
+              <li>💯 Satisifed with grades. As always, Linalg &amp; CS got curved like craaazy which idk how to feel.</li>
+              <li>As always, here are <a href="https://albums.ethandawes.dev/?t=3GxfDXAK#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA" target="_blank">extra
+                  pictures</a></li>
+            </ul>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>
+    <mj-section>
+      <mj-column>
+        <mj-text align="center" font-size="12px"><a href="2024/Nov">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px">$address</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
