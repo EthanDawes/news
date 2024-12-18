@@ -11,14 +11,18 @@ const config = {
 const origin = process.env.ORIGIN ?? "";
 
 export default function(eleventyConfig) {
+  // https://www.11ty.dev/docs/copy/
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
 
+  // https://www.11ty.dev/docs/config/#configuration-api
   eleventyConfig.addTemplateFormats("mjml");
 
+  // https://www.11ty.dev/docs/plugins/html-base/
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
 		baseHref: origin + config.pathPrefix,
   });
 
+  // https://www.11ty.dev/docs/languages/custom/
   eleventyConfig.addExtension("mjml", {
 		compile: async (inputContent) => {
 			const output = mjml2html(inputContent).html;
@@ -29,6 +33,7 @@ export default function(eleventyConfig) {
 		},
 	});
 
+  // https://www.11ty.dev/docs/collections-api/#getfilteredbyglob(-glob-)
   eleventyConfig.addCollection("posts", function (collectionApi) {
 		return collectionApi.getFilteredByGlob("src/[0-9][0-9][0-9][0-9]/**");
 	});
