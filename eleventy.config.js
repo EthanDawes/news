@@ -1,3 +1,5 @@
+import mjml2html from 'mjml'
+
 const config = {
   pathPrefix: "/news",
   dir: {
@@ -12,8 +14,7 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addExtension("mjml", {
 		compile: async (inputContent) => {
-			// Replace any instances of cloud with butt
-			let output = inputContent.replace(/cloud/gi, "butt");
+			const output = mjml2html(inputContent).html;
 
 			return async () => {
 				return output;

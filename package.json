@@ -18,6 +18,7 @@
   },
   "homepage": "funblaster22.github.io/news/",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "mjml": "^4.15.3"
   }
 }
