@@ -6,11 +6,11 @@ const config = {
 };
 
 export default function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
+  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
 
-    eleventyConfig.addTemplateFormats("mjml");
+  eleventyConfig.addTemplateFormats("mjml");
 
-    eleventyConfig.addExtension("mjml", {
+  eleventyConfig.addExtension("mjml", {
 		compile: async (inputContent) => {
 			// Replace any instances of cloud with butt
 			let output = inputContent.replace(/cloud/gi, "butt");
@@ -37,5 +37,5 @@ export default function(eleventyConfig) {
     },
   });
 
-    return config;
+  return config;
 };
