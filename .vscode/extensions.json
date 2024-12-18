@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "mjmlio.vscode-mjml",
-        "sissel.shopify-liquid"
+        "sissel.shopify-liquid",
+        "ms-python.python"
     ]
 }

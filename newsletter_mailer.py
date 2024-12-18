@@ -1,8 +1,10 @@
 import dotenv
+from tqdm import tqdm
+import requests
+
 import ssl
 import smtplib
 import os
-from tqdm import tqdm
 from datetime import date, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -30,30 +32,17 @@ mail = os.environ["MAILING_ADDR"]
 # Create a secure SSL context
 context = ssl.create_default_context() 
 
-def news_path():
-    directory = "_posts"
-    last_modified_time = 0
-    last_modified_file = None
-    
-    # Walk through the directory recursively
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            file_path = os.path.join(root, file)
-            
-            # Get the last modified time of the file
-            file_modified_time = os.path.getmtime(file_path)
-            
-            # Update if this file is more recently modified
-            if file_modified_time > last_modified_time:
-                last_modified_time = file_modified_time
-                last_modified_file = file_path
-    
-    return last_modified_file
+def get_newsletter():
+    """
+    Get the most recent newsletter
+    """
+    period = get_mailing_period().strftime("%Y/%b")
+    response = requests.get("https://funblaster22.github.io/news/" + period)
+    return response.text
 
-# Word sometimes produces invalid unicode, so ignore it
-with open(news_path(), encoding="utf8", errors='ignore') as file:
-    msg = file.read()
-    msg = msg.replace("$address", mail)
+
+msg = get_newsletter()
+msg = msg.replace("$address", mail)
 
 print(msg)
 confirm = input("\nWill send the above. Proceed? ")
