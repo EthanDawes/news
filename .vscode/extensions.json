@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "mjmlio.vscode-mjml"
+        "mjmlio.vscode-mjml",
+        "sissel.shopify-liquid"
     ]
 }

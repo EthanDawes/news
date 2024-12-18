@@ -9,11 +9,11 @@
   </head>
   <body>
     <ul>
-      {% for post in collections.posts reversed %}
+      {%- for post in collections.posts reversed -%}
         <li>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y %b" }}</a>
+            <a href="{{ post.url | url }}">{{ post.date | date: "%Y %b" }}</a>
         </li>
-      {% endfor %}
+      {%- endfor -%}
     </ul>
   </body>
 </html>
