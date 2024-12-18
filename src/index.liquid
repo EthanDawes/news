@@ -11,7 +11,7 @@
     <ul>
       {%- for post in collections.posts reversed -%}
         <li>
-            <a href="{{ post.url | url }}">{{ post.date | date: "%Y %b" }}</a>
+            <a href="{{ post.url }}">{{ post.date | date: "%Y %b" }}</a>
         </li>
       {%- endfor -%}
     </ul>

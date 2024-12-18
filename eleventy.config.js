@@ -1,4 +1,5 @@
-import mjml2html from 'mjml'
+import mjml2html from 'mjml';
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 const config = {
   pathPrefix: "/news",
@@ -7,10 +8,16 @@ const config = {
   }
 };
 
+const origin = process.env.ORIGIN ?? "";
+
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
 
   eleventyConfig.addTemplateFormats("mjml");
+
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+		baseHref: origin + config.pathPrefix,
+  });
 
   eleventyConfig.addExtension("mjml", {
 		compile: async (inputContent) => {
