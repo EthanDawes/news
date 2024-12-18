@@ -35,9 +35,13 @@ jobs:
         with:
           version: 9
           run_install: true
-      - name: Build 🔧
+      - name: Set env
+        # pages url https://stackoverflow.com/a/76354104
+        # set env from bash https://stackoverflow.com/a/57969570
         env:
-          ORIGIN: ${{ steps.deployment.outputs.page_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "ORIGIN=$(gh api \"repos/$GITHUB_REPOSITORY/pages\" --jq '.html_url')" >> $GITHUB_ENV
+      - name: Build 🔧
         run: |
           pnpm run build
       - name: Upload artifact
