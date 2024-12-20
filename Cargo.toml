@@ -1,0 +1,9 @@
+[package]
+name = "news"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+edition = "2021"
+name = "server"
+path = "server.rs"
