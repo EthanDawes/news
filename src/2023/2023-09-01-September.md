@@ -1,3 +1,7 @@
+---
+image: https://lh3.googleusercontent.com/pw/AP1GczNdwFvyntWhztfaiR-vlvuQWCYsb2Tp3WKlYLDctiHvoV8Jh8_TPEF00vbQUAhW6gwOuLj_OvfiMlAH6DxKbQkZ-ZjgIfxFMMt5AyNtqZgoBPVfoyUNQO0PKLzr_PTZu3UaZSjNDKDJmr9Br3lnAT-GeQ=w653-h869-s-no-gm?authuser=0
+---
+
 Dear $name,
 
 Guess who's back, back again? Ethan's back! Tell you're friends!
