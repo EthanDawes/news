@@ -115,7 +115,7 @@ image: /2024/Dec/lincoln.jpg
     </mj-wrapper>
     <mj-section>
       <mj-column>
-        <mj-text align="center" font-size="12px"><a href="/2024/Nov">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px"><a href="{{ page.data.permalink }}">View as a Web Page</a></mj-text>
         <mj-text align="center" font-size="12px">$address</mj-text>
       </mj-column>
     </mj-section>
