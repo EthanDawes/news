@@ -1,5 +1,5 @@
 ---
-image: /2024/Dec/presedent.jpg
+image: /2024/Dec/lincoln.jpg
 ---
 
 <mjml>
@@ -38,7 +38,7 @@ image: /2024/Dec/presedent.jpg
       <mj-section padding-top="0">
         <mj-column>
           <!-- Hero Image -->
-          <mj-image src="presedent.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+          <mj-image src="lincoln.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
         </mj-column>
       </mj-section>
 
@@ -57,11 +57,11 @@ image: /2024/Dec/presedent.jpg
       
       <mj-section>
         <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-image width="250px" height="250px" src="essays.jpg" />
           <mj-text>Even though school's out, I haven't stopped working! 😅 I applied to the CS Scholarship &amp; a study abroad in Estonia. In addition, I studied to test out of sociology and started a Google cybersecurity certificate.</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="josh.jpg" />
+          <mj-image width="250px" height="250px" src="productivity.jpg" />
           <mj-text>Fixed my sleep schedule! Sleep at 7pm and wake up at 4am 😜. Combined with scheduling my day into 30-minute chunks, a post-it wall of "do this week," "do today," and "do over break", and a <a href="https://pypi.org/project/countdown-tray/">countdown program I made</a> to inspire me with impending doom, I actually feel organized!</mj-text>
         </mj-column>
       </mj-section>
@@ -69,15 +69,15 @@ image: /2024/Dec/presedent.jpg
       
       <mj-section>
         <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-image width="150px" height="150px" src="cats.jpg" />
           <mj-text>Oh, I guess I'm 20 now. At least I have kittens to offset the impending dread of becoming a "real real" adult. 🐈</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-image width="150px" height="150px" src="el.jpg" />
           <mj-text>Met friend in Indiana halfway point. Went to Albanese candy store, mall, ate, and talked</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="josh.jpg" />
+          <mj-image width="150px" height="150px" src="school.jpg" />
           <mj-text>Helped mom's students get speaking practice. 🗣️🔥 It was not easy!</mj-text>
         </mj-column>
       </mj-section>
@@ -85,16 +85,12 @@ image: /2024/Dec/presedent.jpg
 
       <mj-section>
         <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-image width="150px" height="150px" src="meringues.jpg" />
           <mj-text>Cooked meringue cookies, they are very messy! Cooked proper meals too!</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
+          <mj-image width="150px" height="150px" src="ikea.jpg" />
           <mj-text>Did work in an IKEA, bought a blåhaj 🦈 which I love very much!</mj-text>
-        </mj-column>
-        <mj-column>
-          <mj-image width="250px" height="250px" src="fuel.jpg" />
-          <mj-text>Practiced drawing. I sent this to a few close friends. 🤗</mj-text>
         </mj-column>
       </mj-section>
 
@@ -108,8 +104,9 @@ image: /2024/Dec/presedent.jpg
               <li>Analyzed dad's work departure times.</li>
               <li>Added a new onboarding experience to my <a href="https://chromewebstore.google.com/detail/google-quick-create-matri/gicglcbkcocdnjjeanpalgbeammnjcea">Google App matrix extension</a></li>
               <li>Published <a href="https://chromewebstore.google.com/detail/strict-focused-youtube/behjadmmpafnpaeijfoioegdpcbpbhij" target="_blank">focused YouTube extension</a> to web store</li>
-              <li>Met friends at library, tried virtual reality headset! (not for me)</li>
+              <li>Met friends at library, tried virtual reality headset! (not my vibe)</li>
               <li>Practiced chess with Josh ♟️ (I lost a lot)</li>
+              <li>Not everything produces results. I wasted a bit of time trying to install a program that consolidates my message platforms.</li>
               <li>As always, here are <a href="https://albums.ethandawes.dev/?t=3GxfDXAK#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA" target="_blank">extra
                   pictures</a></li>
             </ul>
