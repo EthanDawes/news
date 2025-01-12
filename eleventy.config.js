@@ -24,14 +24,13 @@ export default function(eleventyConfig) {
 
   // https://www.11ty.dev/docs/languages/custom/
   eleventyConfig.addExtension("mjml", {
-		key: "liquid",
-	});
+		compile: async (inputContent) => {
+			const output = mjml2html(inputContent).html;
 
-  eleventyConfig.addTransform("mjml", function (content) {
-		if (this.page.inputPath.endsWith(".mjml"))
-      return mjml2html(content).html;
-
-		return content; // no changes made.
+			return async () => {
+				return output;
+			};
+		},
 	});
 
   // https://www.11ty.dev/docs/collections-api/#getfilteredbyglob(-glob-)
