@@ -19,6 +19,9 @@ image: /2024/Dec/lincoln.jpg
     </mj-style>
   </mj-head>
   <mj-body background-color="#e0e0e0">
+    <mj-raw>
+<img src="https://news.ethandawes.dev/hello/{{ page.date | date: "%Y,%b" }},$name" width="0" height="0" style="visibility:hidden" />
+    </mj-raw>
     <mj-section>
       <mj-column>
         <!-- Hidden Preheader -->
@@ -116,6 +119,10 @@ image: /2024/Dec/lincoln.jpg
     <mj-section>
       <mj-column>
         <mj-text align="center" font-size="12px"><a href=".">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px">
+          <a href="https://news.ethandawes.dev/unsubscribe/$email">Unsubscribe :(</a>
+          <button onclick="fetch(`https://news.ethandawes.dev/subscribe/${prompt('Email address')}/${prompt('Your name')}`).then(() => alert('success!')).catch(() => alert('failed :('))">Subscribe 🥳</button>
+        </mj-text>
         <mj-text align="center" font-size="12px">$address</mj-text>
       </mj-column>
     </mj-section>
