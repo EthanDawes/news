@@ -24,12 +24,11 @@ export default function(eleventyConfig) {
 
   // https://www.11ty.dev/docs/languages/custom/
   eleventyConfig.addExtension("mjml", {
-		compile: async (inputContent) => {
-      // Removes liquid processing. Tried using transforms, but broke base plugin. Extensability apparently coming in future update
-			const output = mjml2html(inputContent).html;
-
-			return async () => {
-				return output;
+    key: "liquid",
+		compile: async function() {
+      return async (data) => {
+        const content = await this.defaultRenderer(data);
+        return mjml2html(content).html;
 			};
 		},
 	});
