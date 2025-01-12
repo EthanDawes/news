@@ -4,6 +4,7 @@ use std::{
 
 const SUBSCRIPTIONS_PATH: &str = "../../recipients.csv";
 const ACCESS_LOG_PATH: &str = "../../access.csv";
+const PIXEL_PATH: &str = "../../pixel.png";
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
@@ -57,7 +58,7 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
 
     writeln!(file, "{}", info)?;
 
-    let pixel_data = fs::read("pixel.png").unwrap_or_else(|_| Vec::new());
+    let pixel_data = fs::read(PIXEL_PATH).unwrap_or_else(|_| Vec::new());
     send_response(stream, "200 OK", "image/png", &pixel_data)
 }
 
