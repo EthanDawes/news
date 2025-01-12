@@ -36,7 +36,7 @@ image: /2024/Dec/lincoln.jpg
       <mj-section padding-top="0">
         <mj-column>
           <!-- Hero Image -->
-          <mj-image src="lincoln.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+          <mj-image src="{{ image }}" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
         </mj-column>
       </mj-section>
 
@@ -115,7 +115,7 @@ image: /2024/Dec/lincoln.jpg
     </mj-wrapper>
     <mj-section>
       <mj-column>
-        <mj-text align="center" font-size="12px"><a href="{{ page.data.permalink }}">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px"><a href=".">View as a Web Page</a></mj-text>
         <mj-text align="center" font-size="12px">$address</mj-text>
       </mj-column>
     </mj-section>
