@@ -7,3 +7,6 @@ edition = "2021"
 edition = "2021"
 name = "server"
 path = "server.rs"
+
+[dependencies]
+chrono = "0.4.39"

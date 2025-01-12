@@ -1,6 +1,7 @@
 use std::{
     fs::{self, OpenOptions}, io::{prelude::*, BufReader}, net::{TcpListener, TcpStream}
 };
+use chrono::Utc;
 
 const SUBSCRIPTIONS_PATH: &str = "../../recipients.csv";
 const ACCESS_LOG_PATH: &str = "../../access.csv";
@@ -23,7 +24,7 @@ fn bad_request(stream: &TcpStream) -> std::io::Result<()> {
     send_response(stream, "400 BAD REQUEST", "text/plain", b"bad request")
 }
 
-fn invalid_email(email: &str) {
+fn invalid_email(email: &str) -> bool {
     if let Some(at_pos) = email.find('@') {
         if let Some(dot_pos) = email[at_pos..].find('.') {
             // Ensure there's at least one character between '@' and '.'
@@ -68,7 +69,10 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
         .append(true)
         .open(ACCESS_LOG_PATH)?;
 
-    writeln!(file, "{}", info)?;
+    let now = Utc::now();
+    let iso_datetime = now.to_rfc3339();
+
+    writeln!(file, "{},{}", iso_datetime, info)?;
 
     let pixel_data = fs::read(PIXEL_PATH).unwrap_or_else(|_| Vec::new());
     send_response(stream, "200 OK", "image/png", &pixel_data)
