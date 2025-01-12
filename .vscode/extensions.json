@@ -2,6 +2,7 @@
     "recommendations": [
         "mjmlio.vscode-mjml",
         "sissel.shopify-liquid",
-        "ms-python.python"
+        "ms-python.python",
+        "rust-lang.rust-analyzer"
     ]
 }

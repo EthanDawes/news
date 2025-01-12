@@ -23,6 +23,18 @@ fn bad_request(stream: &TcpStream) -> std::io::Result<()> {
     send_response(stream, "400 BAD REQUEST", "text/plain", b"bad request")
 }
 
+fn invalid_email(email: &str) {
+    if let Some(at_pos) = email.find('@') {
+        if let Some(dot_pos) = email[at_pos..].find('.') {
+            // Ensure there's at least one character between '@' and '.'
+            if dot_pos > 1 {
+                return false; // Email is valid
+            }
+        }
+    }
+    true // Email is invalid
+}
+
 fn handle_connection(stream: &TcpStream) -> std::io::Result<()> {
     let buf_reader = BufReader::new(stream);
     let header = buf_reader.lines().next().unwrap().unwrap_or("".to_owned());
@@ -69,6 +81,9 @@ fn handle_subscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Resul
     }
     let email = path_parts[2];
     let name = path_parts[3];
+    if invalid_email(email) {
+        return bad_request(stream);
+    }
 
     let mut file = OpenOptions::new()
         .create(true)
@@ -86,6 +101,9 @@ fn handle_unsubscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Res
         return bad_request(stream);
     }
     let email = path_parts[2];
+    if invalid_email(email) {
+        return bad_request(stream);
+    }
 
     let file = OpenOptions::new().read(true).open(SUBSCRIPTIONS_PATH).unwrap();
     let reader = BufReader::new(file);
