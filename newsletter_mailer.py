@@ -60,7 +60,9 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             formattedMsg['Subject'] = f"Ethan's {period} life update!"
             formattedMsg['From'] = addr
             formattedMsg['To'] = email
-            formattedMsg.attach(MIMEText(msg.replace("$name", name), "html", "utf-8"))
+            msg = msg.replace("$name", name)
+            msg = msg.replace("$email", email)
+            formattedMsg.attach(MIMEText(msg, "html", "utf-8"))
 
             server.send_message(formattedMsg)
 
