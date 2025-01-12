@@ -45,6 +45,9 @@ msg = get_newsletter()
 msg = msg.replace("$address", mail)
 
 print(msg)
+period = get_mailing_period().strftime("%B %Y")
+subject = f"Ethan's {period} life update!"
+print("subject:", subject)
 confirm = input("\nWill send the above. Proceed? ")
 if len(confirm) == 0 or confirm[0] != "y":
     raise KeyboardInterrupt("Action aborted!")
@@ -56,8 +59,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             name, email = recipient.split(",")
             # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
             formattedMsg = MIMEMultipart("alternative")
-            period = get_mailing_period().strftime("%B %Y")
-            formattedMsg['Subject'] = f"Ethan's {period} life update!"
+            formattedMsg['Subject'] = subject
             formattedMsg['From'] = addr
             formattedMsg['To'] = email
             msg = msg.replace("$name", name)
