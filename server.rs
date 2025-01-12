@@ -2,7 +2,8 @@ use std::{
     fs::{self, OpenOptions}, io::{prelude::*, BufReader}, net::{TcpListener, TcpStream}
 };
 
-const SUBSCRIPTIONS_PATH: &str = "recipients.csv";
+const SUBSCRIPTIONS_PATH: &str = "../../recipients.csv";
+const ACCESS_LOG_PATH: &str = "../../access.csv";
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
@@ -52,7 +53,7 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
     let mut file = OpenOptions::new()
         .create(true)
         .append(true)
-        .open("access.csv")?;
+        .open(ACCESS_LOG_PATH)?;
 
     writeln!(file, "{}", info)?;
 
