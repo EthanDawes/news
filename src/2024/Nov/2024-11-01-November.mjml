@@ -4,9 +4,7 @@ image: /2024/Nov/presedent.jpg
 
 <mjml>
   <mj-head>
-    <mj-raw>
-    	<title>Ethan's College Shenanigans: {{ page.date | date: "%b %Y" }}</title>
-    </mj-raw>
+    <mj-title>Ethan's College Shenanigans: {{ page.date | date: "%b %Y" }}</mj-title>
     <mj-attributes>
       <mj-text font-family="sans-serif" align="center" font-size="16px" color="#555" />
       <mj-image border-radius="8px" />
