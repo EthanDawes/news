@@ -1,7 +1,10 @@
-use std::{
-    fs::{self, OpenOptions}, io::{prelude::*, BufReader}, net::{TcpListener, TcpStream}
-};
 use chrono::Utc;
+use percent_encoding::percent_decode_str;
+use std::{
+    fs::{self, OpenOptions},
+    io::{prelude::*, BufReader},
+    net::{TcpListener, TcpStream},
+};
 
 const SUBSCRIPTIONS_PATH: &str = "../../recipients.csv";
 const ACCESS_LOG_PATH: &str = "../../access.csv";
@@ -14,8 +17,10 @@ fn main() {
         let stream = stream.unwrap();
 
         match handle_connection(&stream) {
-            Ok(_) => {},
-            Err(_) => send_response(&stream, "500 SERVER ERROR", "text/plain", b"server error").unwrap(),
+            Ok(_) => {}
+            Err(_) => {
+                send_response(&stream, "500 SERVER ERROR", "text/plain", b"server error").unwrap()
+            }
         }
     }
 }
@@ -62,7 +67,7 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
     if path_parts.len() != 3 {
         return bad_request(stream);
     }
-    let info = path_parts[2];
+    let info = percent_decode_str(path_parts[2]).decode_utf8_lossy();
 
     let mut file = OpenOptions::new()
         .create(true)
@@ -109,7 +114,10 @@ fn handle_unsubscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Res
         return bad_request(stream);
     }
 
-    let file = OpenOptions::new().read(true).open(SUBSCRIPTIONS_PATH).unwrap();
+    let file = OpenOptions::new()
+        .read(true)
+        .open(SUBSCRIPTIONS_PATH)
+        .unwrap();
     let reader = BufReader::new(file);
 
     let mut lines: Vec<String> = Vec::new();
@@ -137,11 +145,21 @@ fn handle_unsubscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Res
     if found {
         send_response(stream, "200 OK", "text/plain", b"Unsubscribed successfully")
     } else {
-        send_response(stream, "404 NOT FOUND", "text/plain", b"Subscription not found")
+        send_response(
+            stream,
+            "404 NOT FOUND",
+            "text/plain",
+            b"Subscription not found",
+        )
     }
 }
 
-fn send_response(mut stream: &TcpStream, status: &str, content_type: &str, body: &[u8]) -> std::io::Result<()> {
+fn send_response(
+    mut stream: &TcpStream,
+    status: &str,
+    content_type: &str,
+    body: &[u8],
+) -> std::io::Result<()> {
     let response = format!(
         "HTTP/1.1 {}\r\nContent-Type: {}\r\nContent-Length: {}\r\n\r\n",
         status,

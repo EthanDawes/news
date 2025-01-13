@@ -10,3 +10,4 @@ path = "server.rs"
 
 [dependencies]
 chrono = "0.4.39"
+percent-encoding = "2.3.1"
