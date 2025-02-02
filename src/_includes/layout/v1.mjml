@@ -1,0 +1,56 @@
+<mjml>
+  <mj-head>
+    <mj-title>Ethan's College Shenanigans: {{ page.date | date: "%b %Y" }}</mj-title>
+    <mj-attributes>
+      <mj-text font-family="sans-serif" align="center" font-size="16px" color="#555" />
+      <mj-image border-radius="8px" />
+    </mj-attributes>
+    <mj-style>
+      img {
+        object-fit: cover;
+      }
+      li {
+      	margin: 16px 0;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#e0e0e0">
+    <mj-raw>
+<img src="{{ server }}/hello/{{ page.date | date: "%Y,%b" }},$name" width="0" height="0" style="visibility:hidden" />
+    </mj-raw>
+    <mj-section>
+      <mj-column>
+        <!-- Hidden Preheader -->
+        <mj-text font-size="1px" color="transparent" height="0px" padding="0px">
+          Hello $name! I've done new things, so now it's time you hear about them!
+        </mj-text>
+        <!-- Header -->
+        <mj-image src="/surge.png" href="/" alt="fish" width="200px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper background-color="#fff" border-radius="8px" padding-top="0">
+
+
+      <mj-section padding-top="0">
+        <mj-column>
+          <!-- Hero Image -->
+          <mj-image src="{{ image }}" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+        </mj-column>
+      </mj-section>
+
+      {{ content }}
+
+    </mj-wrapper>
+    <mj-section>
+      <mj-column>
+        <mj-text align="center" font-size="12px"><a href=".">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px">
+          <a href="{{ server }}/unsubscribe/$email">Unsubscribe :(</a>
+          <button onclick="fetch(`{{ server }}/subscribe/${prompt('Email address')}/${prompt('Your name')}`, {mode: 'no-cors'}).then(() => alert('success!')).catch(() => alert('failed :('))">Subscribe 🥳</button>
+        </mj-text>
+        <mj-text align="center" font-size="12px">$address</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

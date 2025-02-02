@@ -1,5 +1,5 @@
 import mjml2html from 'mjml';
-import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { EleventyHtmlBasePlugin, EleventyRenderPlugin } from "@11ty/eleventy";
 
 const config = {
   pathPrefix: "/news",
@@ -11,6 +11,9 @@ const config = {
 const origin = process.env.ORIGIN ?? "";
 
 export default function(eleventyConfig) {
+  // https://www.11ty.dev/docs/data-global-custom/
+  eleventyConfig.addGlobalData("server", process.env.CI ? "https://news.ethandawes.dev" : "about:blank");
+
   // https://www.11ty.dev/docs/copy/
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
 
@@ -22,12 +25,16 @@ export default function(eleventyConfig) {
 		baseHref: origin + config.pathPrefix,
   });
 
+  // https://www.11ty.dev/docs/plugins/render/
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
   // https://www.11ty.dev/docs/languages/custom/
   eleventyConfig.addExtension("mjml", {
     key: "liquid",
 		compile: async function() {
       return async (data) => {
         const content = await this.defaultRenderer(data);
+        // Using `render` tag for components: https://shopify.dev/docs/api/liquid/tags/render
         return mjml2html(content).html;
 			};
 		},

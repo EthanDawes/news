@@ -20,7 +20,7 @@ image: /2024/Dec/lincoln.jpg
   </mj-head>
   <mj-body background-color="#e0e0e0">
     <mj-raw>
-<img src="https://news.ethandawes.dev/hello/{{ page.date | date: "%Y,%b" }},$name" width="0" height="0" style="visibility:hidden" />
+<img src="{{ server }}/hello/{{ page.date | date: "%Y,%b" }},$name" width="0" height="0" style="visibility:hidden" />
     </mj-raw>
     <mj-section>
       <mj-column>
@@ -120,8 +120,8 @@ image: /2024/Dec/lincoln.jpg
       <mj-column>
         <mj-text align="center" font-size="12px"><a href=".">View as a Web Page</a></mj-text>
         <mj-text align="center" font-size="12px">
-          <a href="https://news.ethandawes.dev/unsubscribe/$email">Unsubscribe :(</a>
-          <button onclick="fetch(`https://news.ethandawes.dev/subscribe/${prompt('Email address')}/${prompt('Your name')}`, {mode: 'no-cors'}).then(() => alert('success!')).catch(() => alert('failed :('))">Subscribe 🥳</button>
+          <a href="{{ server }}/unsubscribe/$email">Unsubscribe :(</a>
+          <button onclick="fetch(`{{ server }}/subscribe/${prompt('Email address')}/${prompt('Your name')}`, {mode: 'no-cors'}).then(() => alert('success!')).catch(() => alert('failed :('))">Subscribe 🥳</button>
         </mj-text>
         <mj-text align="center" font-size="12px">$address</mj-text>
       </mj-column>

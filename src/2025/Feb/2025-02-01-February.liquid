@@ -1,0 +1,36 @@
+---
+layout: layout/v1.mjml
+image: /2024/Dec/lincoln.jpg
+---
+
+<mj-section>
+  <mj-column>
+    <mj-text font-size="24px" color="#333" font-weight="bold">
+      Ethan's College Shenanigans:<br />January + Feburary 2025
+    </mj-text>
+    <mj-text>
+      TODO hi
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "sledding.jpg"
+  txt: "Made the most of the snow and got to spend some rare time with Seth. Alas, it had mostly melted when we met, but that just raises the stakes!" %}
+  {% render "component/2-col.liquid" img: "thrifting.jpg"
+  txt: "Shopped at a traveling thrifting fair. It was filled with various vendors, and in hindsight, I wish I'd bought more 😞" %}
+</mj-section>
+
+
+{% render "component/other-news.liquid" content: "
+- ✈️ It's official! I'll be interning abroad in Estonia! Stay tuned for details...
+- I enjoy my classes!
+  - Software Engineering: Code a project in groups. Our idea is an [agile](https://en.wikipedia.org/wiki/Agile_software_development)-inspired team collaboration webapp
+  - Software Testing: Initially skeptial of usefullness, but seems like it won't be too bad
+  - Great Issues in Computing: Bogus class, but required. It's a random assortment of surface-level topics. Would much prefer a philosophy course
+  - Russian 2: Somehow placed into Russian 1, had to move around at the start of semester and much happier now!
+  - Entrepreneurship: Yay, I'm going to learn how to netpork, market, and pitch ideas!
+  
+- As always, here are [extra pictures](https://albums.ethandawes.dev/?t=3GxfDXAK#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA)
+" %}
