@@ -9,6 +9,7 @@ const config = {
 };
 
 const origin = process.env.ORIGIN ?? "";
+console.log("CI?", process.env.CI);
 
 export default function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-global-custom/
