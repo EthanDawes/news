@@ -13,6 +13,7 @@ console.log("CI?", process.env.CI);
 
 export default function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-global-custom/
+  console.log("CI? (inner)", process.env.CI, process.env.CI ? "https://news.ethandawes.dev" : "about:blank");
   eleventyConfig.addGlobalData("server", process.env.CI ? "https://news.ethandawes.dev" : "about:blank");
 
   // https://www.11ty.dev/docs/copy/
