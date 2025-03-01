@@ -16,7 +16,8 @@ Home of my newsletters
 
 ### Server (optional)
 1. Install rust toolchain (rustc, cargo)
-2. `cargo run`
+2. `cd target/debug`
+2. `cargo run` or `cargo build --release`
 
 ### Mailer (python script)
 1. [Install python](https://www.python.org/downloads/)
