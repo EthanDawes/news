@@ -12,10 +12,18 @@ Home of my newsletters
 ### Web
 1. `pnpm install`
 2. `pnpm dev`
+3. Deployments are made automaticly on push to GitHub
 
-### Server
+### Server (optional)
 1. Install rust toolchain (rustc, cargo)
 2. `cargo run`
+
+### Mailer (python script)
+1. [Install python](https://www.python.org/downloads/)
+2. `pip install dotenv tqdm requests`
+3. `cp .sample.env .env`
+4. Make & populate `recipients.csv` with format `<name>,<email>`
+5. `python3 newsletter-mailer.py` (will confirm before sending)
 
 ## Guidelines
 - Body images are square & resized to 250x250
