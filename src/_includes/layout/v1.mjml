@@ -16,7 +16,7 @@
   </mj-head>
   <mj-body background-color="#e0e0e0">
     <mj-raw>
-<img src="{{ server }}/hello/{{ page.date | date: "%Y,%b" }},$name_uri" width="0" height="0" style="visibility:hidden" />
+<img src="{{ server }}/hello/{{ page.date | date: "%Y,%b" }},$tracking" width="0" height="0" style="visibility:hidden" />
     </mj-raw>
     <mj-section>
       <mj-column>
