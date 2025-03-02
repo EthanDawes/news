@@ -19,6 +19,7 @@ fn main() {
         match handle_connection(&stream) {
             Ok(_) => {}
             Err(err) => {
+                eprintln!("{}", err.to_string());
                 send_response(&stream, "500 SERVER ERROR", "text/plain", err.to_string().as_bytes()).unwrap()
             }
         }
