@@ -49,11 +49,13 @@ fn invalid_email(email: &str) -> bool {
     true // Email is invalid
 }
 
-fn handle_connection(stream: &TcpStream) -> std::io::Result<()> {
-    let mut buf_reader = BufReader::new(stream);
-    let mut buf = String::new();
-    buf_reader.read_to_string(&mut buf)?;
-    let req = Request::from(&buf)
+fn handle_connection(mut stream: &TcpStream) -> std::io::Result<()> {
+    let mut buffer = [0; 1024];
+    stream.read(&mut buffer)?;
+
+    let raw_request = String::from_utf8_lossy(&buffer);
+
+    let req = Request::from(&raw_request)
         .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
 
     if req.method != HTTPMethod::GET {
