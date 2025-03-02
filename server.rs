@@ -1,6 +1,6 @@
 use chrono::Utc;
 use percent_encoding::percent_decode_str;
-use simple_http_parser::request::Request;
+use simple_http_parser::request::{HTTPMethod, Request};
 use std::{
     fs::{self, OpenOptions},
     io::{prelude::*, BufReader},
@@ -50,38 +50,34 @@ fn invalid_email(email: &str) -> bool {
 }
 
 fn handle_connection(stream: &TcpStream) -> std::io::Result<()> {
-    let buf_reader = BufReader::new(stream);
-    let header = buf_reader.lines().next().unwrap().unwrap_or("".to_owned());
-    let http_request: Vec<&str> = header.split(' ').collect();
+    let mut buf_reader = BufReader::new(stream);
+    let mut buf = String::new();
+    buf_reader.read_to_string(&mut buf)?;
+    let req = Request::from(&buf)
+        .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
 
-    if http_request.len() != 3 || http_request[0] != "GET" {
+    if req.method != HTTPMethod::GET {
         return bad_request(stream);
     }
 
-    let path_parts: Vec<&str> = http_request[1].split('/').collect();
+    let path_parts: Vec<&str> = req.path.split('/').collect();
 
-    println!("Request: {}", header);
+    println!("{} {}", req.method.as_str(), req.path);
 
     match path_parts[1] {
-        "hello" => handle_hello(stream, path_parts),
+        "hello" => handle_hello(stream, path_parts, &req),
         "subscribe" => handle_subscribe(stream, path_parts),
         "unsubscribe" => handle_unsubscribe(stream, path_parts),
         _ => send_response(stream, "404 NOT FOUND", "text/plain", b"not found"),
     }
 }
 
-fn handle_hello(mut stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()> {
+fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>, req: &Request) -> std::io::Result<()> {
     // /hello/<info>
     if path_parts.len() != 3 {
         return bad_request(stream);
     }
     let info = percent_decode_str(path_parts[2]).decode_utf8_lossy();
-
-    let mut buffer = [0; 1024];
-    stream.read(&mut buffer)?;
-    let raw_request = String::from_utf8_lossy(&buffer);
-    let req = Request::from(&raw_request)
-        .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
 
     let mut file = OpenOptions::new()
         .create(true)
