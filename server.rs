@@ -78,7 +78,7 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
     let now = Utc::now();
     let iso_datetime = now.to_rfc3339();
 
-    writeln!(file, "{},{},{}", iso_datetime, stream.local_addr()?, info)?;
+    writeln!(file, "{},{},{}", iso_datetime, stream.peer_addr()?, info)?;
 
     let pixel_data = fs::read(PIXEL_PATH).unwrap_or_else(|_| Vec::new());
     send_response(stream, "200 OK", "image/png", &pixel_data)
