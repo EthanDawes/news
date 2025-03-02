@@ -1,5 +1,6 @@
 use chrono::Utc;
 use percent_encoding::percent_decode_str;
+use simple_http_parser::request::Request;
 use std::{
     fs::{self, OpenOptions},
     io::{prelude::*, BufReader},
@@ -20,7 +21,13 @@ fn main() {
             Ok(_) => {}
             Err(err) => {
                 eprintln!("{}", err.to_string());
-                send_response(&stream, "500 SERVER ERROR", "text/plain", err.to_string().as_bytes()).unwrap()
+                send_response(
+                    &stream,
+                    "500 SERVER ERROR",
+                    "text/plain",
+                    err.to_string().as_bytes(),
+                )
+                .unwrap()
             }
         }
     }
@@ -63,12 +70,18 @@ fn handle_connection(stream: &TcpStream) -> std::io::Result<()> {
     }
 }
 
-fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()> {
+fn handle_hello(mut stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()> {
     // /hello/<info>
     if path_parts.len() != 3 {
         return bad_request(stream);
     }
     let info = percent_decode_str(path_parts[2]).decode_utf8_lossy();
+
+    let mut buffer = [0; 1024];
+    stream.read(&mut buffer)?;
+    let raw_request = String::from_utf8_lossy(&buffer);
+    let req = Request::from(&raw_request)
+        .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
 
     let mut file = OpenOptions::new()
         .create(true)
@@ -78,7 +91,18 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()
     let now = Utc::now();
     let iso_datetime = now.to_rfc3339();
 
-    writeln!(file, "{},{},{}", iso_datetime, stream.peer_addr()?, info)?;
+    let peer_address = stream.peer_addr()?.ip();
+    let mut ip = &peer_address.to_string();
+    if peer_address.is_loopback() {
+        if let Some(forwarded) = req.headers.get("Forwarded") {
+            ip = forwarded;
+        }
+        if let Some(forwarded) = req.headers.get("X-Forwarded-For") {
+            ip = forwarded;
+        }
+    }
+
+    writeln!(file, "{},{},{}", iso_datetime, ip, info)?;
 
     let pixel_data = fs::read(PIXEL_PATH).unwrap_or_else(|_| Vec::new());
     send_response(stream, "200 OK", "image/png", &pixel_data)
