@@ -3,5 +3,4 @@ _site/
 target/
 
 .env
-recipients.csv
-access.csv
+*.csv
