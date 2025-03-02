@@ -58,7 +58,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     with open("recipients.csv") as recipients:
         for recipient in tqdm(recipients.readlines()):
             name, email = recipient.split(",")
-            name = parse.quote(name)
+            name_uri = parse.quote(name)  # URI encoded for consistent tracking urls (see #12)
             # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
             formattedMsg = MIMEMultipart("alternative")
             formattedMsg['Subject'] = subject
@@ -66,6 +66,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             formattedMsg['To'] = email
             personal_msg = msg.replace("$name", name)
             personal_msg = personal_msg.replace("$email", email)
+            personal_msg = personal_msg.replace("$name_uri", name_uri)
             formattedMsg.attach(MIMEText(personal_msg, "html", "utf-8"))
 
             server.send_message(formattedMsg)
