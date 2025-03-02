@@ -5,6 +5,7 @@ import requests
 import ssl
 import smtplib
 import os
+from urllib import parse
 from datetime import date, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -57,6 +58,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     with open("recipients.csv") as recipients:
         for recipient in tqdm(recipients.readlines()):
             name, email = recipient.split(",")
+            name = parse.quote(name)
             # Annoyingly, EmailMessage() and .set_content shows the headers and strange artifacts from Content-Transfer-Encoding: quoted-printable
             formattedMsg = MIMEMultipart("alternative")
             formattedMsg['Subject'] = subject
