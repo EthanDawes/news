@@ -1,0 +1,46 @@
+---
+layout: layout/v1.mjml
+image: /2025/Mar/route.png
+---
+
+<mj-section>
+  <mj-column>
+    <mj-text font-size="24px" color="#333" font-weight="bold">
+      Ethan's College Shenanigans:<br />March 2025
+    </mj-text>
+    <mj-text>
+      Salutations, $name! I hope you've had or will have the chance to take a break.
+    </mj-text>
+    <mj-text>
+      Spring break is over, back on the grind! As you can see in the above map, El, Agnes, and I really got places! I can't possibly include everything we did here, so I'll give you the highlights
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+
+<mj-section>
+  {% render "component/3-col.liquid" img: "niagra.jpg"
+  txt: "Saw Niagara Falls from the Canadian side (it is indeed better!)" %}
+  {% render "component/3-col.liquid" img: "wicked.jpg"
+  txt: "(re)watched Wicked the musical, but this time on Broadway!" %}
+  {% render "component/3-col.liquid" img: "smithsonian.jpg"
+  txt: "Revisited the important DC monuments, plus this Smithsonian!" %}
+</mj-section>
+
+<mj-section>
+  {% render "component/3-col.liquid" img: "motel.jpg"
+  txt: "Stayed in a meringue pie themed room!" %}
+  {% render "component/3-col.liquid" img: "bell.jpg"
+  txt: "Stopped by Philidelphia to see the Liberty bell 🔔" %}
+  {% render "component/3-col.liquid" img: "murder.jpg"
+  txt: "Was a suspect in a murder investigation 🗡️❗ Not actually ofc 😅 This was an RHA event I planned at a historic mansion with professional actors! It was very fun" %}
+</mj-section>
+
+
+{% render "component/other-news.liquid" content: "
+- I got the RA position in [Third and West](https://www.housing.purdue.edu/my-housing/options/apartments/3rd-west.html) 🥳. It's a new building so I don't know what to expect.
+- Competed in a Just Dance bracket! Unfortunately, I got immediately eliminated 😞, but I stayed around to watch
+- Acted in a Maslenitsa (Slavic holiday celebrating the coming of spring) play as the kolobok (similar to the gingerbread man)
+- Ate lots of good Asian food thanks to Agnes (plus the obligatory stop for a $1.50 Costco hot dog! 🌭)
+- Unfortunately, the photo album is down because it was too much effort for me to edit
+" %}

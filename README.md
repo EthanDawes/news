@@ -27,5 +27,6 @@ Home of my newsletters
 5. `python3 newsletter-mailer.py` (will confirm before sending)
 
 ## Guidelines
-- Body images are square & resized to 250x250
-- The smallest dimension of the hero image is resized to 512 (use the "fit" option of PowerToys image resizer)
+- 2-column body images are square & resized to 250x250
+- 3-column body images are square & resized to 150x150
+- The smallest edge of the hero image is resized to 512 (use the "fit" option of PowerToys image resizer)
