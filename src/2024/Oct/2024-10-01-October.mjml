@@ -28,7 +28,7 @@ image: /2024/Oct/makup.jpg
           Hello $name! I've done new things, so now it's time you hear about them!
         </mj-text>
         <!-- Header -->
-        <mj-image src="https://funblaster22.github.io/news/surge.png" href="https://funblaster22.github.io/news" alt="fish" width="200px" />
+        <mj-image src="https://ethandawes.github.io/news/surge.png" href="https://ethandawes.github.io/news" alt="fish" width="200px" />
       </mj-column>
     </mj-section>
 
@@ -38,7 +38,7 @@ image: /2024/Oct/makup.jpg
       <mj-section padding-top="0">
         <mj-column>
           <!-- Hero Image -->
-          <mj-image src="https://funblaster22.github.io/news/2024/Oct/makup.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
+          <mj-image src="https://ethandawes.github.io/news/2024/Oct/makup.jpg" alt="hero image" padding="0" height="300px" border-radius="8px 8px 0 0"></mj-image>
         </mj-column>
       </mj-section>
 
@@ -57,11 +57,11 @@ image: /2024/Oct/makup.jpg
 
       <mj-section>
         <mj-column>
-          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/spooktacular.jpg" />
+          <mj-image width="250px" height="250px" src="https://ethandawes.github.io/news/2024/Oct/spooktacular.jpg" />
           <mj-text>My first event as RHA events director! Had pumpkin/mask painting, food, photo booth, just dance, and a face painter! Food quickly ran out, oops. DIYed volunteer shirts, would not do that again due to time lol. Lots of learning! Will gladly take holiday ideas!</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/severson.jpg" />
+          <mj-image width="250px" height="250px" src="https://ethandawes.github.io/news/2024/Oct/severson.jpg" />
           <mj-text>Attended Jay Severson leadership retreat (RHA). Learned various techniques. Afterwards, explored the hosting farm. Made scented candle, unfortunately missed cow live birth, jumped on inflatable cushion.</mj-text>
         </mj-column>
       </mj-section>
@@ -69,11 +69,11 @@ image: /2024/Oct/makup.jpg
       
       <mj-section>
         <mj-column>
-          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/feast.jpg" />
+          <mj-image width="250px" height="250px" src="https://ethandawes.github.io/news/2024/Oct/feast.jpg" />
           <mj-text>Dad time! Went to the Feast of the Hunter's moon together. Tried their root beer &amp; French onion soup, watched music, browsed stores, and watched the period actors.</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="250px" height="250px" src="https://funblaster22.github.io/news/2024/Oct/doll.jpg" />
+          <mj-image width="250px" height="250px" src="https://ethandawes.github.io/news/2024/Oct/doll.jpg" />
           <mj-text>Stumbled upon a free doll museum in West Lafayette 🤯. Pictures inside disallowed, so trust dolls were stacked from floor to ceiling!</mj-text>
         </mj-column>
       </mj-section>
@@ -81,15 +81,15 @@ image: /2024/Oct/makup.jpg
 
       <mj-section>
         <mj-column>
-          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/cook.jpg" />
+          <mj-image width="150px" height="150px" src="https://ethandawes.github.io/news/2024/Oct/cook.jpg" />
           <mj-text>Wandered to the ominous triangle building (Cook Medical)</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/mall.jpg" />
+          <mj-image width="150px" height="150px" src="https://ethandawes.github.io/news/2024/Oct/mall.jpg" />
           <mj-text>Discovered there’s a mall here⁉️</mj-text>
         </mj-column>
         <mj-column>
-          <mj-image width="150px" height="150px" src="https://funblaster22.github.io/news/2024/Oct/hygiene.jpg" />
+          <mj-image width="150px" height="150px" src="https://ethandawes.github.io/news/2024/Oct/hygiene.jpg" />
           <mj-text>Helped hand out free hygiene supplies for students (RHA)</mj-text>
         </mj-column>
       </mj-section>
@@ -123,7 +123,7 @@ image: /2024/Oct/makup.jpg
     </mj-wrapper>
     <mj-section>
       <mj-column>
-        <mj-text align="center" font-size="12px"><a href="https://funblaster22.github.io/news/2024/Oct">View as a Web Page</a></mj-text>
+        <mj-text align="center" font-size="12px"><a href="https://ethandawes.github.io/news/2024/Oct">View as a Web Page</a></mj-text>
         <mj-text align="center" font-size="12px">$address</mj-text>
       </mj-column>
     </mj-section>

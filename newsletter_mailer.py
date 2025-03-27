@@ -38,7 +38,7 @@ def get_newsletter():
     Get the most recent newsletter
     """
     period = get_mailing_period().strftime("%Y/%b")
-    response = requests.get("https://funblaster22.github.io/news/" + period)
+    response = requests.get("https://ethandawes.github.io/news/" + period)
     return response.text
 
 

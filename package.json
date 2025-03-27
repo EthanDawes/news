@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/funblaster22/news.git"
+    "url": "git+https://github.com/ethandawes/news.git"
   },
   "author": "Ethan Dawes",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/funblaster22/news/issues"
+    "url": "https://github.com/ethandawes/news/issues"
   },
-  "homepage": "funblaster22.github.io/news/",
+  "homepage": "ethandawes.github.io/news/",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "mjml": "^4.15.3"
