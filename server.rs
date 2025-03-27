@@ -99,8 +99,10 @@ fn handle_hello(stream: &TcpStream, path_parts: Vec<&str>, req: &Request) -> std
             ip = forwarded;
         }
     }
+    let blank_str = String::new();
+    let user_agent = req.headers.get("User-Agent").unwrap_or(&blank_str);
 
-    writeln!(file, "{},{},{}", iso_datetime, ip, info)?;
+    writeln!(file, "{},{},{},{}", iso_datetime, ip, user_agent, info)?;
 
     let pixel_data = fs::read(PIXEL_PATH).unwrap_or_else(|_| Vec::new());
     send_response(stream, "200 OK", "image/png", &pixel_data)

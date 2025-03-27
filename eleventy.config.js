@@ -12,7 +12,7 @@ const origin = process.env.ORIGIN ?? "";
 
 export default function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-global-custom/
-  eleventyConfig.addGlobalData("server", process.env.CI ? "https://news.ethandawes.dev" : "about:blank");
+  eleventyConfig.addGlobalData("server", process.env.CI ? "https://news.ethandawes.dev" : "http://localhost:7878");
 
   // https://www.11ty.dev/docs/copy/
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
