@@ -1,8 +1,8 @@
-# news
+# News
 Home of my newsletters
 
 **Features:**
-- 🖌️ Easily create with liquid templates & mjml for email compatability
+- 🖌️ Easily create with liquid templates & mjml for email compatibility
 - 👁️ Email open analytics with integrated pixel tracking server
 - 📋 Subscribe/unsubscribe
 - 📤 Automated bulk sending
@@ -12,7 +12,7 @@ Home of my newsletters
 ### Web
 1. `pnpm install`
 2. `pnpm dev`
-3. Deployments are made automaticly on push to GitHub
+3. Deployments are made automatically on push to GitHub
 
 ### Server (optional)
 1. Install rust toolchain (rustc, cargo)
@@ -26,7 +26,19 @@ Home of my newsletters
 4. Make & populate `recipients.csv` with format `<name>,<email>`
 5. `python3 newsletter-mailer.py` (will confirm before sending)
 
-## Guidelines
+## Newsletter formatting
 - 2-column body images are square & resized to 250x250
 - 3-column body images are square & resized to 150x150
 - The smallest edge of the hero image is resized to 512 (use the "fit" option of PowerToys image resizer)
+
+## Special replacements
+To personalize emails, the mailer script makes the following substitutions:
+- `$name`: Recipient name
+- `$tracking`: Recipient name, URI encoded
+- `$email`: Recipient email, used for unsubscribing
+- `$address`: Sender's physical address, read from `.env`
+
+## Server endpoints
+- `/hello/<info>`: Tracking pixel which logs iso_datetime, ip, user_agent, `info` to `access.csv`
+- `/subscribe/<email>/<name>`: Adds `name,email` to `recipients.csv`
+- `/unsubscribe/<email>`: Removes `email` from `recipients.csv`

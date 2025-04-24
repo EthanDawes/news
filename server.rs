@@ -130,7 +130,7 @@ fn handle_subscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Resul
 }
 
 fn handle_unsubscribe(stream: &TcpStream, path_parts: Vec<&str>) -> std::io::Result<()> {
-    // /unsubscribe/email
+    // /unsubscribe/<email>
     if path_parts.len() != 3 {
         return bad_request(stream);
     }
