@@ -50,10 +50,13 @@ def send_personalized_mail(msg, subject, recipients_file="recipients.csv"):
 
 def read_file(path):
     try:
-        with open(path) as file:
+        with open(path, encoding="utf-8") as file:
             return file.read()
     except FileNotFoundError:
+        print("oof")
         raise argparse.ArgumentTypeError(f"File not found: {path}")
+    except Exception as e:
+        raise argparse.ArgumentTypeError(e)
 
 
 if __name__ == "__main__":
