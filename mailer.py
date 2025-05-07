@@ -9,8 +9,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
 
+mailservers = {
+    "gmail": ("smtp.gmail.com", 465),
+    "outlook": ("smtp-mail.outlook.com", 587)
+}
+
 dotenv.load_dotenv()
-port = 465  # For SSL
+mailserver, port = mailservers[os.environ["PROVIDER"]]
 addr = os.environ["EMAIL_ADDR"]
 password = os.environ["EMAIL_PW"]
 mail = os.environ["MAILING_ADDR"]
@@ -27,7 +32,13 @@ def send_personalized_mail(msg, subject, recipients_file="recipients.csv"):
     if len(confirm) == 0 or confirm[0] != "y":
         raise KeyboardInterrupt("Action aborted!")
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    if port == 465:
+        server = smtplib.SMTP_SSL(mailserver, port, context=context)
+    else:
+        server = smtplib.SMTP(mailserver, port)
+        server.starttls(context=context)
+
+    with server:
         server.login(addr, password)
         with open(recipients_file) as recipients:
             for recipient in tqdm(recipients.readlines()):
