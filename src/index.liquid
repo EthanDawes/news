@@ -44,7 +44,7 @@
       {%- for post in collections.posts reversed -%}
         <a href="{{ post.url }}">
           <li>
-            <img src="{{ post.data.image }}" alt="Post Image">
+            <img src="{% unless post.data.image contains '://' %}{{ post.url }}/{% endunless %}{{ post.data.image }}" alt="Post Image">
             {{ post.date | date: "%Y %b" }}</a>
           </li>
         </a>
