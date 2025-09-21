@@ -1,0 +1,59 @@
+---
+layout: layout/v1.mjml
+image: firstday.jpg
+---
+
+<mj-section>
+  <mj-column>
+    <mj-text font-size="24px" color="#333" font-weight="bold">
+      Ethan's College Newsletter:<br />August 2025
+    </mj-text>
+    <mj-text>
+      <p>
+        WE'RE SO BACK, $name!!! 🔥 This may be my busiest semester yet, but I wouldn't want it any other way 🔥🔥🔥🏋️💪
+      </p>
+      <p>
+        Oh, my summer? Estonia, Iceland, and Romania were all very fun BUT NO TIME!!! Plus, I gotta leave something to talk about 😉.
+        There's some photos are in the album if you want to peek though.
+      </p>
+      <p>
+        It's been a hot minute, so what have you been up to? A question my job likes to ask me and which is now my favorite question, is
+        "how have you grown in your job/the past year" (whichever is more applicable)
+      </p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "statefair.jpg"
+  txt: "A week after getting back, I was off again to visit El at the Indiana State Fair for 3 days. It was a good time: we saw art, animals, rode rides, and ate all the unhealthy food." %}
+
+  {% render "component/2-col.liquid" img: "room.jpg"
+  txt: "I'm an RA in the brand new apartments! It is way too fancy! I have this room and a bedroom all to myself!" %}
+</mj-section>
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "rhaday.jpg"
+  txt: "RHA day returns for it's 50th birthday! I'm super excited to continue as Events Director with other amazing exec members! Not pictured: we finally threw out the moldy fridge in our office 🥳" %}
+
+  {% render "component/2-col.liquid" img: "ecelabs.jpg"
+  txt: "Don't forget, I'm still the software lead for ECELabs! We're trying to create a whole new version of the website by this semester, so I've been busy interviewing, hiring and onboarding new members!" %}
+</mj-section>
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "ra.jpg"
+  txt: "Resident attendance has been rough, but I'm always down for a challenge! I'm particularly proud of my asynchronous card game idea. One person makes a move and leaves, I move, then the next person makes a move." %}
+</mj-section>
+
+
+{% render "component/other-news.liquid" content: "
+- Classes:
+  - Operating Systems
+  - Algorithms & proofs
+  - Competitive programming
+  - Linear Algrbra (again ☹️ need to get a better grade for math minor lol)
+  - Stats
+
+- Our house got struck by lightning, so please be paitent if the [photo album](https://albums.ethandawes.dev/?t=rFwNC3Nb#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA) is down :(
+" %}

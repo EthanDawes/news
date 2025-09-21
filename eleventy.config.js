@@ -17,6 +17,7 @@ export default function(eleventyConfig) {
   // https://www.11ty.dev/docs/copy/
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}", {
 		mode: "html-relative",
+    failOnError: false,
 	});
   eleventyConfig.addPassthroughCopy("src/surge.png");
 
