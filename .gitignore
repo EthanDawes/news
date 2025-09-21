@@ -2,8 +2,10 @@ node_modules/
 __pycache__/
 _site/
 target/
+__pypackages__/
 
 *.env
 !sample.env
 *.csv
 message.*
+.pdm-python

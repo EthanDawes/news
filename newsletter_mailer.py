@@ -4,6 +4,7 @@ from datetime import date, timedelta
 
 from mailer import send_personalized_mail
 
+URL_PREFIX = "https://ethandawes.github.io/news/"
 
 def get_mailing_period():
     """
@@ -22,9 +23,10 @@ def get_newsletter():
     Get the most recent newsletter
     """
     period = get_mailing_period().strftime("%Y/%b")
-    response = requests.get("https://ethandawes.github.io/news/" + period)
+    response = requests.get(URL_PREFIX + period)
     if response.status_code != 200:
-        raise ConnectionError("Page returned status " + str(response.status_code))
+        print("Could not get", URL_PREFIX + period + ".", "Status", response.status_code)
+        response = requests.get(input("URL of page to send: "))
     return response.text
 
 
