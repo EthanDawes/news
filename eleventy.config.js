@@ -15,7 +15,9 @@ export default function(eleventyConfig) {
   eleventyConfig.addGlobalData("server", process.env.CI ? "https://news.ethandawes.dev" : "http://localhost:7878");
 
   // https://www.11ty.dev/docs/copy/
-  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}");
+  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg}", {
+		mode: "html-relative",
+	});
 
   // https://www.11ty.dev/docs/config/#configuration-api
   eleventyConfig.addTemplateFormats("mjml");
