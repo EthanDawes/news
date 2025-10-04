@@ -25,12 +25,16 @@ def get_newsletter():
     period = get_mailing_period().strftime("%Y/%b")
     response = requests.get(URL_PREFIX + period)
     if response.status_code != 200:
-        print("Could not get", URL_PREFIX + period + ".", "Status", response.status_code)
-        response = requests.get(input("URL of page to send: "))
+        raise ConnectionError("Could not get " + URL_PREFIX + period + ". Status " + str(response.status_code))
     return response.text
 
 
-msg = get_newsletter()
 period = get_mailing_period().strftime("%B %Y")
+try:
+    msg = get_newsletter()
+except ConnectionError as err:
+    print(err)
+    msg = requests.get(input("URL of page to send: ")).text
+    period = input("For which month is this newsletter? ")
 subject = f"Ethan's {period} life update!"
 send_personalized_mail(msg, subject)
