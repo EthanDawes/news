@@ -1,0 +1,51 @@
+---
+layout: layout/v1.mjml
+image: headshot.jpg
+---
+
+<mj-section>
+  <mj-column>
+    <mj-text font-size="24px" color="#333" font-weight="bold">
+      Ethan's College Newsletter:<br />September 2025
+    </mj-text>
+    <mj-text>
+      <p>
+        On the summer internship search! 🥲 So far applied to several places. Roblox made me do 3 hr of assessments only to say no thanks ☹️. I've Waited in sooooo many lines during career fairs. 😭
+      </p>
+      <p>
+        So if you have any connections in tech, please let me know! I'm interested in web development, software development, and automation tooling, not so much in IT support.
+      </p>
+      <p>
+        I'm curious, what was your first job or internship?
+      </p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "pazera.jpg"
+  txt: "Had dinner with Purdue president Mung Chiang <a href=\"https://ethandawes.github.io/news/2024/Nov/\">again</a>! I asked the hard questions like, \"How have you grown as Purdue President\" and \"What happened to the gender inclusive learning community?\" Got a non-answer, but at least I voiced my concerns. Pictured is the Housing director." %}
+
+  {% render "component/2-col.liquid" img: "feast.jpg"
+  txt: "Family came down for the extended break! We went to the Feast of the Hunter's moon, a historical reenactment of a French trading fort. We bought root beer 🍺, French onion soup 🍲, and shopped 🛒." %}
+</mj-section>
+
+<mj-section>
+  {% render "component/2-col.liquid" img: "disco.jpg"
+  txt: "PSUB had an amazing silent disco! I recruited some friends and we jammed out! 🕺🪩" %}
+
+  {% render "component/2-col.liquid" img: "crocs.jpg"
+  txt: "RA event I want to highlight: I printed a massive picture of crocs to decorate and gave away jibbitz (the decorations for the holes)." %}
+</mj-section>
+
+
+{% render "component/other-news.liquid" content: "
+- I'm organizing a mini competition game between friends, inspired by the TV show [Big Brother](https://en.wikipedia.org/wiki/Big_Brother_(American_TV_series)).
+
+- FINALLY got rid of the moldy RHA fridge! (It's the small wins that count)
+
+- Went to Germanfest and got some cool pictures!
+
+- [Photo album](https://albums.ethandawes.dev/?t=rFwNC3Nb#9UFc5aBHAXAaMjKKiDeVHQgFM3ffacsoep31mfkrZaKA) running again! This is a sign I should figure out my backup strategy soon 😅
+" %}
