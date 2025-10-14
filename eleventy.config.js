@@ -20,6 +20,7 @@ export default function(eleventyConfig) {
     failOnError: false,
 	});
   eleventyConfig.addPassthroughCopy("src/surge.png");
+  eleventyConfig.addPassthroughCopy({"src/2025/09 Sep/resume.docx": "2025/Sep/resume.docx"});
 
   // https://www.11ty.dev/docs/config/#configuration-api
   eleventyConfig.addTemplateFormats("mjml");
