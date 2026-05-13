@@ -31,8 +31,8 @@ Home of my newsletters
 - 3-column body images are square & resized to 150x150
 - The smallest edge of the hero image is resized to 512 (use the "fit" option of PowerToys image resizer)
 
-## Special replacements
-To personalize emails, the mailer script makes the following substitutions:
+## Personalization
+The mailer script makes the following substitutions:
 - `$name`: Recipient name
 - `$tracking`: Recipient name, URI encoded
 - `$email`: Recipient email, used for unsubscribing
